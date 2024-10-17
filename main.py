@@ -24,7 +24,7 @@ args={
     "take_max": True,
     "take_min": False,
     "ns_info_saved": True,
-    "access_token": None
+    "access_token": None # https://networks.skewed.de/restricted
 }
 
 props_to_remove = ["name", "label", "nodeLabel"]
@@ -122,7 +122,7 @@ def filter_graph_names(
 
     if ns_info_saved:
         print("\nOpening Netzschleuder Info file...\n")
-        with open('Datasets/ns_info.pkl', 'rb') as f:
+        with open('./ns_info.pkl', 'rb') as f:
             ns_info = pickle.load(f)
     else:
         print("\nConnecting to Netzschleuder...\n")
@@ -281,10 +281,10 @@ def get_save_graphs(graph_names: list):
                             edge_feats_df[f"{key}_{i}"]= column
 
 
-                outdir = f"./EasyNetz/Datasets/netzschleuder_{name_to_save}"
+                outdir = f"./Datasets/netzschleuder_{name_to_save}"
                 outdir_name = f"{outdir}/netzschleuder_{name_to_save}"
                 if not os.path.exists(outdir):
-                    os.mkdir(outdir)
+                    os.makedirs(outdir)
 
                 if not node_feats_df.empty:
                     node_feats_df.to_csv(f"{outdir_name}.node_feats", sep='\t', index=False, header=False)
