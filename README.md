@@ -28,8 +28,16 @@ The tool provides flexibility by allowing users to adjust these parameters to su
 
 ## Installation
 
-To run EasyNetz, you need to have the following dependencies installed. These can be installed using the `requirements.txt` file as shown below.
+Before running EasyNetz, you need to have the following dependencies installed. These can be installed using the `requirements.txt` file as shown below.
 
 ```bash
 pip install -r requirements.txt
+```
 
+## Running
+
+To run EasyNetz, open bash (or terminal) inside the EasyNetz folder and run the following command:
+
+```bash
+python -m main
+```
