@@ -1,5 +1,9 @@
 # EasyNetz
 
+
+[![DOI](https://zenodo.org/badge/874288208.svg)](https://doi.org/10.5281/zenodo.14710814)
+
+
 EasyNetz is a Python tool for selecting graphs from the Netzschleuder database based on user-defined criteria such as whether they are directed, undirected, weighted, unweighted, and various properties like the number of nodes, edges, and graph density. Once the graphs are filtered according to the criteria, the selected graphs can be downloaded and exported into CSV files for further analysis.
 
 ## Parameters Overview
